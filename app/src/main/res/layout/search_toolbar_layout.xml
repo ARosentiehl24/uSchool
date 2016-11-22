@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.codetail.widget.RevealFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:visibility="invisible">
+
+        <ImageButton
+            android:id="@+id/closeSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/md_screen_edge_margin_horizontal"
+            android:layout_marginStart="@dimen/md_screen_edge_margin_horizontal"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_arrow_back_accent_24dp" />
+
+        <EditText
+            android:id="@+id/inputSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@color/colorAccent"
+            android:hint="@string/toolbar_search"
+            android:imeOptions="actionSearch"
+            android:maxLines="1" />
+
+        <ImageButton
+            android:id="@+id/voiceSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/md_screen_edge_margin_horizontal"
+            android:layout_marginStart="@dimen/md_screen_edge_margin_horizontal"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_mic_accent_24dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/md_divider_height"
+        android:layout_gravity="bottom"
+        android:background="@color/md_dark_divider_12" />
+</io.codetail.widget.RevealFrameLayout>

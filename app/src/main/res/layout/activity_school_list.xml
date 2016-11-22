@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/activity_school_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.arrg.android.app.uschool.view.activity.SchoolListActivity">
+
+        <include layout="@layout/background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/toolbar_layout" />
+
+                <include layout="@layout/search_toolbar_layout" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/view_bottom_margin">
+
+                    <include layout="@layout/view_empty" />
+
+                    <include layout="@layout/view_loading" />
+
+                    <include layout="@layout/view_error" />
+
+                    <android.support.v4.widget.SwipeRefreshLayout
+                        android:id="@+id/swipeRefreshLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.afollestad.dragselectrecyclerview.DragSelectRecyclerView
+                            android:id="@+id/listOfSchools"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="vertical" />
+                    </android.support.v4.widget.SwipeRefreshLayout>
+                </RelativeLayout>
+
+                <com.luseen.spacenavigation.SpaceNavigationView
+                    android:id="@+id/spaceNavigationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    app:active_item_color="@color/colorPrimary"
+                    app:centre_button_color="@color/colorPrimary"
+                    app:centre_button_icon="@drawable/ic_person_white_24dp"
+                    app:centre_button_icon_color="@color/colorAccent"
+                    app:inactive_item_color="@color/white_with_alpha"
+                    app:space_background_color="@color/colorAccent" />
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

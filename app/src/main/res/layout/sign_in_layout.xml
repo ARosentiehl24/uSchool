@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:pv="http://schemas.android.com/tools"
+    android:id="@+id/signInLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/md_screen_edge_margin_horizontal"
+    android:orientation="vertical"
+    android:visibility="invisible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md_screen_edge_margin_horizontal"
+        android:layout_marginEnd="@dimen/md_screen_edge_margin_horizontal"
+        android:layout_marginStart="@dimen/md_screen_edge_margin_horizontal"
+        android:background="@drawable/input_background">
+
+        <RelativeLayout
+            android:layout_width="@dimen/input_size_sign_in"
+            android:layout_height="@dimen/input_size_sign_in"
+            android:background="@drawable/input_icon_background">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_person_white_24dp"
+                android:tint="@color/colorPrimary" />
+        </RelativeLayout>
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/etIdentification"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/input_size_sign_in"
+            android:layout_marginEnd="@dimen/md_screen_edge_margin_horizontal"
+            android:layout_marginStart="@dimen/md_screen_edge_margin_horizontal"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="@string/identification"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLines="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md_screen_edge_margin_horizontal"
+        android:layout_marginEnd="@dimen/md_screen_edge_margin_horizontal"
+        android:layout_marginStart="@dimen/md_screen_edge_margin_horizontal"
+        android:background="@drawable/input_background">
+
+        <RelativeLayout
+            android:layout_width="@dimen/input_size_sign_in"
+            android:layout_height="@dimen/input_size_sign_in"
+            android:background="@drawable/input_icon_background">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_lock_outline_white_24dp"
+                android:tint="@color/colorPrimary" />
+        </RelativeLayout>
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/input_size_sign_in"
+            android:layout_marginEnd="@dimen/md_screen_edge_margin_horizontal"
+            android:layout_marginStart="@dimen/md_screen_edge_margin_horizontal"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="@string/password"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_size_sign_in"
+        android:layout_marginEnd="@dimen/md_screen_edge_margin_horizontal"
+        android:layout_marginStart="@dimen/md_screen_edge_margin_horizontal"
+        android:backgroundTint="@color/colorAccent"
+        android:elevation="0dp"
+        android:text="@string/sign_in"
+        android:textColor="@color/colorPrimary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/md_screen_edge_margin_horizontal"
+        android:layout_marginStart="@dimen/md_screen_edge_margin_horizontal">
+
+        <TextView
+            android:id="@+id/tvForgotPasswor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_margin="2.5dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="start"
+            android:text="@string/forgot_your_password"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/tvNewAccount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="2.5dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="end"
+            android:text="@string/create_a_new_account"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/md_screen_edge_margin_horizontal"
+        android:layout_marginTop="@dimen/md_screen_edge_margin_horizontal"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/md_divider_height"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/divider_right_gradient" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/md_screen_edge_margin_horizontal"
+            android:layout_marginStart="@dimen/md_screen_edge_margin_horizontal"
+            android:gravity="center"
+            android:text="@string/or"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="normal|bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/md_divider_height"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/divider_left_gradient" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/md_screen_edge_margin_horizontal"
+        android:orientation="vertical">
+
+        <in.championswimmer.libsocialbuttons.buttons.BtnFacebook
+            android:id="@+id/fbLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/md_screen_edge_margin_horizontal"
+            android:layout_marginEnd="@dimen/md_screen_edge_margin_horizontal"
+            android:layout_marginStart="@dimen/md_screen_edge_margin_horizontal"
+            android:layout_weight="1"
+            android:elevation="0dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/sign_in_with_facebook"
+            android:textSize="20sp"
+            android:textStyle="normal|bold" />
+
+        <in.championswimmer.libsocialbuttons.buttons.BtnGoogleplus
+            android:id="@+id/googleLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/md_screen_edge_margin_horizontal"
+            android:layout_marginEnd="@dimen/md_screen_edge_margin_horizontal"
+            android:layout_marginStart="@dimen/md_screen_edge_margin_horizontal"
+            android:layout_weight="1"
+            android:elevation="0dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/sign_in_with_google"
+            android:textSize="20sp"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+</LinearLayout>

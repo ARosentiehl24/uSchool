@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Database Server Settings">
+        <EditTextPreference
+            android:hint="@string/ip"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:key="host"
+            android:maxLines="1"
+            android:summary="192.168.0.0"
+            android:title="@string/host_ip_address" />
+
+        <EditTextPreference
+            android:hint="@string/port"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:key="port"
+            android:maxLines="1"
+            android:summary="80"
+            android:title="@string/connection_port" />
+    </PreferenceCategory>
+</PreferenceScreen>
